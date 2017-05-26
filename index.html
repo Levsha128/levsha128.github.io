@@ -1,1 +1,20 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Visualization player</title>
+</head>
+<body>
+<audio crossOrigin="anonymous" controls="controls">
+    <source src="/music/1.mp3" type="audio/mpeg">
+</audio>
+<section class="wrapper">
+    <div class="player">
+        <canvas class="player__visualization" width="600" height="600"></canvas>
+        <div class="player__controls"></div>
+    </div>
+</section>
+<script src="/vendor/dat.gui.js"></script>
+<script src="bundle.js"></script>
+</body>
+</html>
