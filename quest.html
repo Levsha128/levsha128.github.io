@@ -29,6 +29,12 @@
     <img src="img/3.jpg" class="img-rounded">
 </div>
 
+<div id="images-container2" class="hidden">
+    <img src="img/4.jpg" class="img-rounded">
+    <img src="img/5.jpg" class="img-rounded">
+    <img src="img/6.jpg" class="img-rounded">
+</div>
+
 <img src="img/cat.gif">
 
 <script src="//code.jquery.com/jquery.js"></script>
@@ -61,10 +67,15 @@
      $(document).on('click', '#unlock', function(){
        //alert();
        var code = $('#code').val();
-       var codes = ['60535', '46277', '42080', '61331', '81690'];
+       var codes = ['60535', '46277', '42080'];
+       var codes2 = ['61331','81690'];
 
        if(codes.indexOf(code)>=0){
          $('#images-container').removeClass('hidden');
+         $('#images-container2').addClass('hidden');
+       } else if(codes2.indexOf(code)>=0) {
+         $('#images-container').addClass('hidden');
+         $('#images-container2').removeClass('hidden');
        } else{
          alert('Wrong code. Get ready for detonation ;)');
        }
